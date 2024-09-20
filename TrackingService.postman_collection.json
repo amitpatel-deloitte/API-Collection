@@ -1,0 +1,97 @@
+{
+	"info": {
+		"_postman_id": "9ff16a10-da9a-4fd7-b527-69fdc3195c12",
+		"name": "TrackingService",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38279237"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8084/tracking/start-tracking/1",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8084/tracking/start-tracking/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"tracking",
+						"start-tracking",
+						"1"
+					]
+				},
+				"description": "Generated from cURL: curl -X 'GET' \\\n  'http://localhost:8084/tracking/start-tracking/1' \\\n  -H 'accept: */*'"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8084/tracking/update-tracking-status/1?trackingStatus=ORDER_DELIVERED",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8084/tracking/update-tracking-status/1?trackingStatus=ORDER_DELIVERED",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"tracking",
+						"update-tracking-status",
+						"1"
+					],
+					"query": [
+						{
+							"key": "trackingStatus",
+							"value": "ORDER_DELIVERED"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl -X 'PUT' \\\n  'http://localhost:8084/tracking/update-tracking-status/1?trackingStatus=ORDER_DELIVERED' \\\n  -H 'accept: */*'\n"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8084/tracking/tracking-status/1",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8084/tracking/tracking-status/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"tracking",
+						"tracking-status",
+						"1"
+					]
+				},
+				"description": "Generated from cURL: curl -X 'GET' \\\n  'http://localhost:8084/tracking/tracking-status/1' \\\n  -H 'accept: */*'"
+			},
+			"response": []
+		}
+	]
+}

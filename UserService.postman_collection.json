@@ -1,0 +1,301 @@
+{
+	"info": {
+		"_postman_id": "760cc2ba-54c9-46bd-84c8-dd558a6020d6",
+		"name": "UserService",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38279237"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8081/auth/signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"name\": \"Sumit\",\n\"email\": \"sumit@deloitte.com\",\n\"password\": \"sumit123\",\n\"contact_number\": \"8449917270\",\n\"address\": \"gurugram\",\n\"role\": \"CUSTOMER\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/auth/login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"jwt\", pm.response.json().token);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\" : \"Anuj@deloitte.com\",\n    \"password\" : \"anuj123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/admin/all-users",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{jwt}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/admin/all-users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"admin",
+						"all-users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/admin/delete?email=amit@deloitte.com",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{jwt}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/admin/delete?email=amit@deloitte.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"admin",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "amit@deloitte.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/users/{id}",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{jwt}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/users/552",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"users",
+						"552"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/users/update/sumit@deloitte.com",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9DVVNUT01FUiJ9XSwic3ViIjoic3VtaXRAZGVsb2l0dGUuY29tIiwiaWF0IjoxNzI2NzQ5NDgzLCJleHAiOjE3MjY3NTMwODN9.Seuvj3VDiYnrcu_6kyx7JfcsJpojKxPyW9h3oplNP8g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\": 552,\n    \"name\": \"Sumit\",\n    \"email\": \"sumit@deloitte.com\",\n    \"phone_number\": \"8449917270\",\n    \"password\": \"$2a$10$JHtnNTzEoAK2P5wC2fj21.KGY4eYp6PF0oTvQFepdatSL5MckoXZ.\",\n    \"address\": \"gurugram\",\n    \"role\":\"CUSTOMER\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/users/update/sumit@deloitte.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"users",
+						"update",
+						"sumit@deloitte.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/users/delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{jwt}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\" : \"anuj@deloitte.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/users/delete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"users",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/users/update-password?email=sonu%40deloitte.com&newPassword=sonu123",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoic29udUBkZWxvaXR0ZS5jb20iLCJpYXQiOjE3MjY4MzA1MjUsImV4cCI6MTcyNjgzNDEyNX0.1aMZJYn6lGJ0VFA7zVeetw4Smtx1XOqu3qKctZjnT9c"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8081/users/update-password?email=sonu%40deloitte.com&newPassword=sonu123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"users",
+						"update-password"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "sonu%40deloitte.com"
+						},
+						{
+							"key": "newPassword",
+							"value": "sonu123"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl -X 'PATCH' \\\n  'http://localhost:8081/users/update-password?email=sonu%40deloitte.com&newPassword=sonu123' \\\n  -H 'accept: */*' \\\n  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoic29udUBkZWxvaXR0ZS5jb20iLCJpYXQiOjE3MjY4MzA1MjUsImV4cCI6MTcyNjgzNDEyNX0.1aMZJYn6lGJ0VFA7zVeetw4Smtx1XOqu3qKctZjnT9c'"
+			},
+			"response": []
+		}
+	]
+}

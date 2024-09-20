@@ -1,0 +1,513 @@
+{
+	"info": {
+		"_postman_id": "b56a839f-cde2-4eaa-873b-422362da937a",
+		"name": "RestaurantsService",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38279237"
+	},
+	"item": [
+		{
+			"name": "Item",
+			"item": [
+				{
+					"name": "http://localhost:8082/item/all",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8082/item/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"item",
+								"all"
+							]
+						},
+						"description": "Generated from cURL: curl -X 'GET' \\\n  'http://localhost:8082/item/all' \\\n  -H 'accept: */*'"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8082/item",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"item_id\": 0,\n  \"item_name\": \"Matar paneer\",\n  \"description\": \"Indian dish\",\n  \"price\": 250,\n  \"available\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/item",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"item"
+							]
+						},
+						"description": "Generated from cURL: curl -X 'POST' \\\n  'http://localhost:8082/item' \\\n  -H 'accept: */*' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n  \"item_id\": 0,\n  \"item_name\": \"Matar paneer\",\n  \"description\": \"Indian dish\",\n  \"price\": 250,\n  \"available\": true\n}'"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8082/item/update/8",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"item_id\": 0,\n  \"item_name\": \"Panner Handi\",\n  \"description\": \"Sabzi\",\n  \"price\": 200,\n  \"available\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/item/update/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"item",
+								"update",
+								"8"
+							]
+						},
+						"description": "Generated from cURL: curl -X 'PUT' \\\n  'http://localhost:8082/item/update/8' \\\n  -H 'accept: */*' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n  \"item_id\": 0,\n  \"item_name\": \"Panner Handi\",\n  \"description\": \"Sabzi\",\n  \"price\": 200,\n  \"available\": true\n}'"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8082/item/8",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8082/item/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"item",
+								"8"
+							]
+						},
+						"description": "Generated from cURL: curl -X 'GET' \\\n  'http://localhost:8082/item/8' \\\n  -H 'accept: */*'"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8082/item/8",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "accept",
+								"value": ""
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8082/item/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"item",
+								"8"
+							]
+						},
+						"description": "Generated from cURL: curl -X 'DELETE' \\\n  'http://localhost:8082/item/8' \\\n  -H 'accept: */*"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Menu",
+			"item": [
+				{
+					"name": "http://localhost:8082/menu/all",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8082/menu/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"menu",
+								"all"
+							]
+						},
+						"description": "Generated from cURL: curl -X 'GET' \\\n  'http://localhost:8082/menu/all' \\\n  -H 'accept: */*'"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8082/menu/1",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8082/menu/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"menu",
+								"1"
+							]
+						},
+						"description": "Generated from cURL: curl -X 'GET' \\\n  'http://localhost:8082/menu/1' \\\n  -H 'accept: */*'"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8082/menu",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Snacks\",\n  \"itemIds\": [\n    4\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/menu",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"menu"
+							]
+						},
+						"description": "Generated from cURL: curl -X 'POST' \\\n  'http://localhost:8082/menu' \\\n  -H 'accept: */*' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n  \"name\": \"Snacks\",\n  \"itemIds\": [\n    4\n  ]\n}'"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8082/menu/update/menu/5",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Drink\",\n  \"itemIds\": [\n    7\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/menu/update/menu/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"menu",
+								"update",
+								"menu",
+								"5"
+							]
+						},
+						"description": "Generated from cURL: curl -X 'PUT' \\\n  'http://localhost:8082/menu/update/menu/5' \\\n  -H 'accept: */*' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n  \"name\": \"Drink\",\n  \"itemIds\": [\n    7\n  ]\n}'"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Restaurant",
+			"item": [
+				{
+					"name": "http://localhost:8082/restaurant/all",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8082/restaurant/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"restaurant",
+								"all"
+							]
+						},
+						"description": "Generated from cURL: curl -X 'GET' \\\n  'http://localhost:8082/restaurant/all' \\\n  -H 'accept: */*'"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8082/restaurant",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Only Coffee\",\n  \"location\": \"bangalore\",\n  \"cuisine_type\": \"drink\",\n  \"contact_info\": \"1231234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/restaurant",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"restaurant"
+							]
+						},
+						"description": "Generated from cURL: curl -X 'POST' \\\n  'http://localhost:8082/restaurant' \\\n  -H 'accept: */*' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n  \"name\": \"Only Coffee\",\n  \"location\": \"bangalore\",\n  \"cuisine_type\": \"drink\",\n  \"contact_info\": \"1231234\"\n}'"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8082/restaurant/add-menus-to-restaurant?restaurantId=4",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"menuIds\": [\n    5\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/restaurant/add-menus-to-restaurant?restaurantId=4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"restaurant",
+								"add-menus-to-restaurant"
+							],
+							"query": [
+								{
+									"key": "restaurantId",
+									"value": "4"
+								}
+							]
+						},
+						"description": "Generated from cURL: curl -X 'POST' \\\n  'http://localhost:8082/restaurant/add-menus-to-restaurant?restaurantId=4' \\\n  -H 'accept: */*' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n  \"menuIds\": [\n    5\n  ]\n}'"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8082/restaurant/update/4",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Only coffee\",\n  \"location\": \"Chennai\",\n  \"cuisine_type\": \"Spanish\",\n  \"contact_info\": \"2313\",\n  \"menuIds\": [\n    5\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/restaurant/update/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"restaurant",
+								"update",
+								"4"
+							]
+						},
+						"description": "Generated from cURL: curl -X 'PUT' \\\n  'http://localhost:8082/restaurant/update/4' \\\n  -H 'accept: */*' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n  \"name\": \"Only coffee\",\n  \"location\": \"Chennai\",\n  \"cuisine_type\": \"Spanish\",\n  \"contact_info\": \"2313\",\n  \"menuIds\": [\n    5\n  ]\n}'"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8082/restaurant/4",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8082/restaurant/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"restaurant",
+								"4"
+							]
+						},
+						"description": "Generated from cURL: curl -X 'GET' \\\n  'http://localhost:8082/restaurant/4' \\\n  -H 'accept: */*'"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8082/restaurant/2",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8082/restaurant/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"restaurant",
+								"2"
+							]
+						},
+						"description": "Generated from cURL: curl -X 'DELETE' \\\n  'http://localhost:8082/restaurant/2' \\\n  -H 'accept: */*'"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

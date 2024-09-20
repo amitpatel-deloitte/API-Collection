@@ -1,0 +1,124 @@
+{
+	"info": {
+		"_postman_id": "f022b7c6-c68b-4eaa-8081-af2e7e399137",
+		"name": "OrderService",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38279237"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8083/orders",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"restaurantId\": 3,\n  \"userId\": 552,\n  \"itemsIdsWithQuantity\": {\n    \"1\": 1,\n    \"2\": 1\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8083/orders/1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8083/orders/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"orders",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8083/orders/1/payment-status?paymentStatus=PAID",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8083/orders/1/payment-status?paymentStatus=PAID",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"orders",
+						"1",
+						"payment-status"
+					],
+					"query": [
+						{
+							"key": "paymentStatus",
+							"value": "PAID"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl -X 'PUT' \\\n  'http://localhost:8083/orders/1/payment-status?paymentStatus=PAID' \\\n  -H 'accept: */*'"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8083/orders/2/order-status?orderStatus=ACCEPTED",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8083/orders/2/order-status?orderStatus=ACCEPTED",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"orders",
+						"2",
+						"order-status"
+					],
+					"query": [
+						{
+							"key": "orderStatus",
+							"value": "ACCEPTED"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl -X 'PUT' \\\n  'http://localhost:8083/orders/2/order-status?orderStatus=ACCEPTED' \\\n  -H 'accept: */*'"
+			},
+			"response": []
+		}
+	]
+}
